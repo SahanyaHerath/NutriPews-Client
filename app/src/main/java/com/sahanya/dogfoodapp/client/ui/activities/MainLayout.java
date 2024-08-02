@@ -15,6 +15,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import com.sahanya.dogfoodapp.client.ui.fragment.HomeFragment;
+import com.sahanya.dogfoodapp.client.ui.fragment.InfoFragment;
 import com.sahanya.dogfoodapp.client.ui.fragment.OrderHistoryFragment;
 import com.sahanya.dogfoodapp.client.ui.fragment.ProfileFragment;
 import com.sahanya.dogfoodapp.client.R;
@@ -74,7 +75,9 @@ public class MainLayout extends AppCompatActivity implements NavigationBarView.O
             fragment = new ProfileFragment();
         } else if (R.id.PaymentHistory == item.getItemId()) {
         fragment = new OrderHistoryFragment();
-        }else {
+        } else if (R.id.info == item.getItemId()){
+          fragment = new InfoFragment();
+        } else {
             fragment = new HomeFragment();
         }
         displayFragment(fragment);
